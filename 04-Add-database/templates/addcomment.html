@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div>
+        <h1>Add Comment</h1>
+        <img src="./static/images/logo-large.png" width="200px">
+        <h2>What is the meaning of life?</h2>
+        <p>What would you like to say about this BIG question?</p>
+        <form action="/addcomment" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Add a title for you post" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea class="form-control" rows="4" name="comment">Type your comment here...</textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Add Your Comment</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

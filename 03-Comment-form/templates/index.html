@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div>
+        <h1>Big Questions</h1>
+        <p>This website is going to ask some of life's BIG questions...</p>
+        <img src="./static/images/logo-large.png" width="200px">
+        <h2>What is the meaning of life?</h2>
+        <p>Please add your answer below:</p>
+        <a class="btn btn-outline-primary" href="{{ url_for('addcomment') }}" role="button">Add your answer</a>
+    
+        <!-- Data table goes here -->
+        <div class="mt-md-5">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Comment</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

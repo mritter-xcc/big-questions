@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div>
+        <h1>Big Questions</h1>
+        <p>This website is going to ask some of life's BIG questions...</p>
+        <img src="./static/images/logo-large.png" width="200px">
+        <h2>What is the meaning of life?</h2>
+        <p>Please add your answer below:</p>
+        <a class="btn btn-outline-primary" href="{{ url_for('addcomment') }}" role="button">Add your answer</a>
+        
+        <!-- Data table goes here -->
+        <div class="mt-md-5">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Comment</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <th scope="row">{{row['id']}}</th>
+                        <td>{{row['title']}}</td>
+                        <td>{{row['name']}}</td>
+                        <td>{{row['comment']}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
