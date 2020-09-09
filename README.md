@@ -7,3 +7,5 @@ This demo Flask app is setup in four stages.
 This version establishes a basic Flask application with a layout template and two pages created from this page - index.html and about.html.
 
 02-Navbar-footer
+
+03-Comment-form
